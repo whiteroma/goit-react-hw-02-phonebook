@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { nanoid } from 'nanoid';
 import React from 'react';
-import { FormContainer } from './Form.styled';
+import { FormContainer } from './ContactForm.styled';
 
 const INITIAL_STATE = {
   name: '',
@@ -15,7 +15,7 @@ class Form extends React.Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    this.props.onSubmit({ ...this.state });
+    this.props.onSubmit([ ...this.state ]);
     this.reset();
   };
 
