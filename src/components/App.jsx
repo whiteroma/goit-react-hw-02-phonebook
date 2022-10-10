@@ -11,7 +11,9 @@ export class App extends React.Component {
   };
 
   formHandler = data => {
-    console.log(data)
+    this.setState({
+      contacts: [data]
+    });
   }
 
 
