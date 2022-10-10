@@ -3,6 +3,7 @@ import { nanoid } from 'nanoid';
 import ContactList from './ContactList/ContactList';
 import Filter from './Filter/Filter';
 import Form from './Form/Form';
+import { Container } from './App.styled';
 
 export class App extends React.Component {
   state = {
@@ -18,7 +19,7 @@ export class App extends React.Component {
   render() {
     return (
       <>
-        <div>
+        <Container>
           <h1>Phonebook</h1>
           
           <Form onSubmit={this.formHandler}/>
@@ -26,7 +27,7 @@ export class App extends React.Component {
           <h2>Contacts</h2>
           {/* <Filter/>
     <ContactList/> */}
-        </div>
+        </Container>
       </>
     );
   }
