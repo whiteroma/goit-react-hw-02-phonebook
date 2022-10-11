@@ -15,7 +15,7 @@ class ContactForm extends React.Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    this.props.onSubmit({...this.state, id: nanoid() });
+    this.props.onSubmit({ ...this.state, id: nanoid() });
     this.reset();
   };
 
@@ -31,7 +31,6 @@ class ContactForm extends React.Component {
   };
 
   render() {
-
     return (
       <FormContainer onSubmit={this.handleSubmit}>
         <label htmlFor={this.nameId}>
