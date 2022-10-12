@@ -14,7 +14,7 @@ export class App extends React.Component {
 
   formHandler = data => {
     const addedName = this.state.contacts
-      .map(contact => contact.name)
+      .map(contact => contact.name.toLowerCase())
       .includes(data.name);
     if (addedName) {
       alert(`${data.name} is already in a list`);
